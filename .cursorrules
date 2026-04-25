@@ -1,0 +1,111 @@
+---
+description: 
+alwaysApply: true
+---
+
+# ──────────────────────────────────────────────────────────────
+# CURSOR RULES – LearnFlow (Premium EdTech App) – v2.0
+# Author: You
+# Last Updated: Feb 2026
+# ──────────────────────────────────────────────────────────────
+
+## 1. PROJECT PHILOSOPHY (Never break these)
+- This is a **premium, professional, calm, trustworthy** education app.
+- Always use **Material 3** (useMaterial3: true).
+- Support **Light + Dark mode** perfectly.
+- **Never hardcode colors, sizes, or fonts** — always use the theme.
+- All UI components must be **custom widgets** (never use raw ElevatedButton, Text, TextField, AppBar, etc.).
+
+## 2. COLOR SYSTEM (Fixed & Global)
+Use these exact names everywhere. Never use Colors.xxx or hex directly.
+
+### Light Mode (default)
+- primary:          #4F46E5     (Indigo-600)
+- onPrimary:        #FFFFFF
+- primaryContainer: #E0E7FF
+- secondary:        #14B8A6     (Teal-500)
+- background:       #F8FAFC
+- surface:          #FFFFFF
+- onBackground:     #1E2937
+- onSurface:        #1E2937
+- error:            #EF4444
+
+### Dark Mode
+- primary:          #6366F1     (Indigo-500)
+- onPrimary:        #FFFFFF
+- primaryContainer: #312E81
+- secondary:        #2DD4BF     (Teal-400)
+- background:       #0F172A
+- surface:          #1E2937
+- onBackground:     #F1F5F9
+- onSurface:        #F1F5F9
+- error:            #F87171
+
+### Semantic Colors (use these names)
+- titleColor          → onBackground (main headings)
+- subtitleColor       → onSurface.withOpacity(0.75)
+- bodyTextColor       → onSurface
+- captionColor        → onSurface.withOpacity(0.6)
+- successColor        → #10B981
+- streakColor         → #F59E0B
+- dividerColor        → onSurface.withOpacity(0.1)
+
+## 3. TYPOGRAPHY (Google Fonts)
+- Headings → **Poppins**
+- Body      → **Inter**
+
+Always use these TextStyle names:
+- AppTitle          (32sp, Poppins, w600, titleColor)
+- SectionTitle      (24sp, Poppins, w600, titleColor)
+- CardTitle         (18sp, Poppins, w600, titleColor)
+- Subtitle          (16sp, Inter, w500, subtitleColor)
+- BodyText          (16sp, Inter, w400, bodyTextColor)
+- BodySmall         (14sp, Inter, w400, bodyTextColor)
+- Caption           (12sp, Inter, w400, captionColor)
+
+## 4. MANDATORY CUSTOM WIDGETS (Always use these)
+Never use the raw Flutter widgets below. Always import and use the custom version.
+
+| Use This                  | Never Use              | Purpose                              |
+|---------------------------|------------------------|--------------------------------------|
+| AppTitle                  | Text (large)           | Main screen titles                   |
+| SectionTitle              | Text (medium)          | Section headers                      |
+| BodyText / BodySmall      | Text                   | All body text                        |
+| PrimaryButton             | ElevatedButton         | Main CTA buttons                     |
+| SecondaryButton           | ElevatedButton         | Secondary actions                    |
+| OutlineButton             | OutlinedButton         | Tertiary actions                     |
+| CustomTextField           | TextField              | All input fields                     |
+| CustomAppBar              | AppBar                 | All app bars                         |
+| ContentCard               | Card                   | Subject, chapter, library cards      |
+| ProgressRing              | CircularProgressIndicator | Mastery % rings                   |
+| StreakBadge               | Badge / Chip           | Study streak                         |
+| CustomBottomNav           | NavigationBar          | Bottom navigation                    |
+| CustomTabBar              | TabBar                 | Segmented tabs in chapters           |
+
+All custom widgets must accept these parameters:
+- `onTap`
+- `isLoading`
+- `enabled`
+- `style` (for further customization)
+- `size` (small / medium / large)
+
+## 5. NAMING & FOLDER STRUCTURE (Strict)
+- All custom widgets → `lib/widgets/custom_*.dart`
+- Theme → `lib/theme/app_theme.dart`
+- Colors → `lib/theme/app_colors.dart`
+- Text styles → `lib/theme/app_text_styles.dart`
+
+File names must be:
+- `custom_button.dart`
+- `custom_text_field.dart`
+- `custom_app_bar.dart`
+- etc.
+
+## 6. CODING RULES (Cursor must follow every time)
+
+1. **Theme Access**
+   Always do:
+   ```dart
+   final theme = Theme.of(context);
+   final colors = theme.colorScheme;
+   final textTheme = theme.textTheme;
