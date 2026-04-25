@@ -24,8 +24,9 @@ class CustomBottomNav extends StatelessWidget {
 
   static const int _home = 0;
   static const int _myClass = 1;
-  static const int _library = 2;
-  static const int _me = 3;
+  static const int _tutor = 2;
+  static const int _library = 3;
+  static const int _me = 4;
 
   @override
   Widget build(BuildContext context) {
@@ -70,6 +71,15 @@ class CustomBottomNav extends StatelessWidget {
                 unselectedColor: unselected,
                 badgeCount: badges?[_myClass],
                 onTap: () => onTap(_myClass),
+              ),
+              _NavItem(
+                icon: Icons.auto_awesome,
+                label: 'Tutor',
+                isSelected: currentIndex == _tutor,
+                selectedColor: selected,
+                unselectedColor: unselected,
+                badgeCount: badges?[_tutor],
+                onTap: () => onTap(_tutor),
               ),
               _NavItem(
                 icon: Icons.library_books_rounded,

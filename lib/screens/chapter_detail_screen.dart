@@ -10,6 +10,8 @@ import 'coming_soon_screen.dart';
 import 'quiz_screen.dart';
 import 'audio_player_screen.dart';
 
+import 'ai_tutor_screen.dart';
+
 /// Main hub when user taps a chapter: progress, content grid, actions.
 class ChapterDetailScreen extends StatefulWidget {
   const ChapterDetailScreen({
@@ -262,6 +264,22 @@ class _ChapterDetailScreenState extends State<ChapterDetailScreen> {
         );
           },
         ),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => AITutorScreen(
+                subjectName: widget.subjectName ?? 'General Subject',
+                chapterTitle: widget.chapterTitle,
+              ),
+            ),
+          );
+        },
+        backgroundColor: colors.primary,
+        icon: Icon(Icons.auto_awesome, color: colors.onPrimary),
+        label: Text('Learn with AI', style: TextStyle(color: colors.onPrimary, fontWeight: FontWeight.bold)),
       ),
     );
   }

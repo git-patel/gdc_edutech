@@ -15,7 +15,7 @@ class OnboardingScreen extends StatefulWidget {
 
   static const List<String> boards = ['CBSE', 'ICSE', 'State', 'Others'];
   static const List<String> standards = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
-  static const List<String> goals = ['School exams', 'Olympiads', 'JEE/NEET', 'General knowledge'];
+  static const List<String> goals = ['School Exams', 'I love Sports (Cricket)', 'I love Video Games', 'Space & Sci-Fi', 'I love Music'];
   static const List<String> mediums = ['English', 'Gujarati', 'Hindi'];
 
   @override
@@ -33,7 +33,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   String? _selectedRole;
   String _board = 'CBSE';
   String _standard = '5';
-  String _goal = 'School exams';
+  String _goal = 'School Exams';
   String _medium = 'English';
   bool _googleSignInLoading = false;
   /// After Google sign-in, if user doc does not exist we show form with name pre-filled and this true.
@@ -397,7 +397,7 @@ class _WelcomePage extends StatelessWidget {
             const SizedBox(height: 40),
             const AppTitle('Welcome to LearnFlow'),
             const SizedBox(height: 16),
-            const Subtitle('Learn without limits'),
+            const Subtitle('Your Agentic AI Tutor', textAlign: TextAlign.center),
           ],
         ),
       ),
@@ -418,10 +418,10 @@ class _IntroPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SectionTitle('All in one place'),
+            const SectionTitle('Intelligent Learning'),
             const SizedBox(height: 24),
             const BodyText(
-              'Textbooks, videos, quizzes, notes, offline downloads.',
+              'Adaptive pacing, Socratic sessions, and hyper-personalized analogies built just for you.',
               textAlign: TextAlign.center,
             ),
           ],
@@ -587,7 +587,7 @@ class _ProfilePage extends StatelessWidget {
           const SizedBox(height: 8),
           BodyText(
             isStudent
-                ? 'We\'ll use this to personalise your learning.'
+                ? 'Tell us your interests so your AI Tutor can use analogies you love!'
                 : 'Add your child\'s details to track their progress.',
             textAlign: TextAlign.center,
           ),

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | LearnFlow</title>
+  <meta name="description" content="Information about the LearnFlow project and its goals.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="landing-site">
+    <header class="site-header">
+      <div class="container">
+        <a href="index.html" class="site-logo" aria-label="LearnFlow Home"><i class="fas fa-brain"></i> LearnFlow</a>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="features.html">Features</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="about.html" class="active">About</a>
+        </nav>
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" style="padding-top: 5rem;">
+        <div class="container" style="max-width: 800px;">
+          <h1 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--text-primary);">About the Project</h1>
+
+          <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--text-secondary);">
+            <strong>LearnFlow</strong> is an innovative EdTech application designed to revolutionize how individuals approach learning new and complex topics through the power of Agentic AI.
+          </p>
+
+          <h2 style="font-size: 1.8rem; margin-top: 3rem; margin-bottom: 1rem; color: var(--primary);">The Challenge</h2>
+          <div style="background: rgba(79, 70, 229, 0.05); padding: 1.5rem; border-left: 4px solid var(--primary); border-radius: 8px; margin-bottom: 2rem;">
+            <p style="margin: 0; font-style: italic; color: var(--text-primary); font-size: 1.1rem;">
+              "Create an intelligent assistant that helps users learn new concepts effectively. The system should personalize content and adapt to user pace and understanding."
+            </p>
+          </div>
+          
+          <p style="font-size: 1.05rem; margin-bottom: 1.5rem; color: var(--text-secondary);">
+            We tackled this challenge by moving beyond simple prompt-response interactions. Standard AI interfaces often overwhelm learners with too much information or fail to verify if the user actually understood the output. Our solution implements a <strong>continuous learning loop</strong> driven by multiple AI agents working in tandem to profile the user, generate tailored analogies, test comprehension, and dynamically adjust the curriculum.
+          </p>
+
+          <h2 style="font-size: 1.8rem; margin-top: 3rem; margin-bottom: 1rem; color: var(--primary);">Tech Stack</h2>
+          <ul style="list-style-type: none; padding: 0; margin-bottom: 2rem;">
+            <li style="margin-bottom: 1rem; padding: 1rem; background: var(--surface); border-radius: 8px; border: 1px solid var(--border);">
+              <strong style="color: var(--text-primary);">Frontend App:</strong> Flutter (Dart) with Material UI, ensuring a beautiful and responsive cross-platform experience.
+            </li>
+            <li style="margin-bottom: 1rem; padding: 1rem; background: var(--surface); border-radius: 8px; border: 1px solid var(--border);">
+              <strong style="color: var(--text-primary);">AI Engine:</strong> Powered by Gemini Pro API, leveraging its massive context window and reasoning capabilities to manage multi-agent workflows.
+            </li>
+            <li style="margin-bottom: 1rem; padding: 1rem; background: var(--surface); border-radius: 8px; border: 1px solid var(--border);">
+              <strong style="color: var(--text-primary);">Local Storage:</strong> User progress, mastery levels, and chat history are cached locally (SQLite / SharedPreferences) for snappy performance.
+            </li>
+          </ul>
+
+          <p style="margin-top: 3rem; text-align: center;">
+            <a href="index.html" class="btn btn-primary">Back to Home</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> LearnFlow. All rights reserved.</p>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="features.html">Features</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="about.html">About</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

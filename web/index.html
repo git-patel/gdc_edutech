@@ -1,24 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
   <base href="$FLUTTER_BASE_HREF">
-
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="description" content="LearnFlow - An intelligent learning assistant that personalizes content and adapts to user pace.">
 
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
@@ -29,20 +15,110 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>LearnFlow</title>
+  <title>LearnFlow | Intelligent Learning Assistant</title>
   <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- Landing Site Container -->
+  <div id="landing-site">
+    <header class="site-header">
+      <div class="container">
+        <a href="index.html" class="site-logo" aria-label="LearnFlow Home"><i class="fas fa-brain"></i> LearnFlow</a>
+        <nav class="site-nav">
+          <a href="index.html" class="active">Home</a>
+          <a href="features.html">Features</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="about.html">About</a>
+        </nav>
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4rem; text-align: left;">
+          <div style="flex: 1; min-width: 300px;">
+            <h1 class="hero-title animate-fade-in" style="font-size: clamp(2.5rem, 4vw, 3.5rem); margin-bottom: 1rem;">Intelligent Learning,<br><span style="color: var(--primary);">Personalized for You</span></h1>
+            <p class="hero-tagline animate-fade-in animate-delay-1" style="margin: 0 0 2rem 0; font-size: 1.1rem;">Master new concepts effectively. LearnFlow is an AI-powered assistant that personalizes content and dynamically adapts to your pace and understanding.</p>
+            <div class="hero-cta animate-fade-in animate-delay-2" style="justify-content: flex-start; margin-top: 0;">
+              <a href="download.html" class="btn btn-primary"><i class="fas fa-play"></i> Launch App</a>
+              <a href="features.html" class="btn btn-outline">Explore Features</a>
+            </div>
+          </div>
+          
+          <div class="hero-visual animate-fade-in animate-delay-2" style="flex: 1; min-width: 300px; background: var(--surface); border-radius: 16px; box-shadow: 0 20px 40px var(--shadow); border: 1px solid var(--border); overflow: hidden;">
+            <div style="background: rgba(79, 70, 229, 0.1); padding: 1rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 10px;">
+              <div style="width: 12px; height: 12px; border-radius: 50%; background: #EF4444;"></div>
+              <div style="width: 12px; height: 12px; border-radius: 50%; background: #F59E0B;"></div>
+              <div style="width: 12px; height: 12px; border-radius: 50%; background: #10B981;"></div>
+              <span style="margin-left: 10px; font-weight: 600; font-size: 0.9rem; color: var(--primary);"><i class="fas fa-auto-awesome"></i> Agentic Tutor</span>
+            </div>
+            <div style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+              <div style="align-self: flex-start; background: rgba(79, 70, 229, 0.1); color: var(--text-primary); padding: 1rem; border-radius: 12px 12px 12px 0; max-width: 85%; font-size: 0.95rem;">
+                Hi there! What complex topic can I break down for you today?
+              </div>
+              <div style="align-self: flex-end; background: var(--primary); color: white; padding: 1rem; border-radius: 12px 12px 0 12px; max-width: 85%; font-size: 0.95rem;">
+                I'm a basketball fan, but I don't understand Physics projectiles.
+              </div>
+              <div style="align-self: flex-start; background: rgba(79, 70, 229, 0.1); color: var(--text-primary); padding: 1rem; border-radius: 12px 12px 12px 0; max-width: 85%; font-size: 0.95rem;">
+                <strong>Perfect!</strong> Think of a projectile like a three-pointer. When Steph Curry shoots, the ball follows a curved path called a parabola. <br><br>The only force acting on it once it leaves his hand is gravity. Want to try a quick quiz on this?
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Why Choose LearnFlow?</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-tachometer-alt"></i></div>
+            <h3>Adaptive Pacing</h3>
+            <p>The system evaluates your cognitive load. If you struggle, it breaks concepts down into micro-lessons. If you excel, it accelerates the curriculum.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-user-check"></i></div>
+            <h3>Personalized Content</h3>
+            <p>Tell the system what you love. LearnFlow explains complex topics using analogies tailored to your personal interests and hobbies.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-comments"></i></div>
+            <h3>Socratic Interactivity</h3>
+            <p>Instead of just providing answers, the AI employs the Socratic method, asking guiding questions to help you arrive at conclusions yourself.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> LearnFlow. All rights reserved.</p>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="features.html">Features</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="about.html">About</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+
+  <!-- App Container (Hidden initially) -->
+  <div id="app-container"></div>
+
+  <!-- Scripts for PDF rendering (used by the flutter app) -->
   <script src='https://cdn.jsdelivr.net/npm/pdfjs-dist@4.6.82/build/pdf.min.mjs' type='module'></script>
   <script type='module'>
-  var { pdfjsLib } = globalThis;
-  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.6.82/build/pdf.worker.mjs';
-
-  var pdfRenderOptions = {
-    cMapUrl: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.6.82/cmaps/',
-    cMapPacked: true,
-  }
+    var { pdfjsLib } = globalThis;
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.6.82/build/pdf.worker.mjs';
+    var pdfRenderOptions = { cMapUrl: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.6.82/cmaps/', cMapPacked: true }
   </script>
-  <script src="flutter_bootstrap.js" async></script>
+  <script src="js/script.js"></script>
+
 </body>
 </html>

@@ -57,6 +57,7 @@ dependencies:
 
   # Admin: file pick for content upload
   file_picker: ^8.1.6
+  google_generative_ai: ^0.4.7
 
 dev_dependencies:
   flutter_test:

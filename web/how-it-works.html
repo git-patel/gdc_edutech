@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How It Works | LearnFlow</title>
+  <meta name="description" content="Understand the agentic workflow behind the LearnFlow assistant.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="landing-site">
+    <header class="site-header">
+      <div class="container">
+        <a href="index.html" class="site-logo" aria-label="LearnFlow Home"><i class="fas fa-brain"></i> LearnFlow</a>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="features.html">Features</a>
+          <a href="how-it-works.html" class="active">How It Works</a>
+          <a href="about.html">About</a>
+        </nav>
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" style="padding-top: 5rem;">
+        <h1 class="section-title">Agentic Workflow & Architecture</h1>
+        <p style="text-align: center; max-width: 800px; margin: -2rem auto 4rem; color: var(--text-secondary); font-size: 1.1rem;">
+          A deep dive into how our multi-agent system orchestrates the learning experience. We utilize advanced LLM orchestration to provide a seamless, adaptive tutoring session.
+        </p>
+
+        <div class="architecture-diagram animate-fade-in" style="background: var(--surface); padding: 3rem; border-radius: 16px; border: 1px solid var(--border); margin: 0 auto 4rem; max-width: 900px; box-shadow: 0 20px 40px var(--shadow);">
+          <div style="display: flex; flex-direction: column; gap: 2rem; align-items: center; text-align: center;">
+            <div style="background: rgba(79, 70, 229, 0.1); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+              <i class="fas fa-magic" style="font-size: 2rem; color: var(--primary);"></i>
+            </div>
+            <h3 style="color: var(--primary); margin-bottom: 0.5rem; font-size: 1.8rem;">Context-Aware Integration</h3>
+            <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 600px; line-height: 1.6;">
+              LearnFlow is deeply integrated. You can use the AI Assistant directly from whatever content you are currently viewing. If you are reading a chapter on Physics, clicking the AI will automatically load the AI with the exact context of your current Physics lesson, instantly answering your questions without you having to explain where you are or what you are studying.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline animate-fade-in animate-delay-1">
+          <div class="timeline-item">
+            <div class="timeline-number">1</div>
+            <div>
+              <h3 style="margin: 0 0 0.5rem; font-size: 1.3rem; color: var(--text-primary);">The Profiler Agent</h3>
+              <p style="margin: 0; color: var(--text-secondary);">When a user initiates a session, the Profiler Agent retrieves the user's historical data, learning style preferences, and past difficulties. It constructs a dynamic system prompt that sets the tone, vocabulary level, and analogy domain for the session.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-number">2</div>
+            <div>
+              <h3 style="margin: 0 0 0.5rem; font-size: 1.3rem; color: var(--text-primary);">The Content Generator</h3>
+              <p style="margin: 0; color: var(--text-secondary);">The core tutor. It takes the topic and the profile context to generate the actual instructional material. It is instructed to output content in structured chunks rather than massive walls of text, preventing cognitive overload.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-number">3</div>
+            <div>
+              <h3 style="margin: 0 0 0.5rem; font-size: 1.3rem; color: var(--text-primary);">The Evaluator Agent</h3>
+              <p style="margin: 0; color: var(--text-secondary);">Runs continuously in the background. It analyzes the user's responses to questions or their requests for clarification. If it detects high cognitive load (e.g., user asking "I don't get it" multiple times), it signals the Content Generator to drop down a complexity level.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-number">4</div>
+            <div>
+              <h3 style="margin: 0 0 0.5rem; font-size: 1.3rem; color: var(--text-primary);">The Quiz Master Agent</h3>
+              <p style="margin: 0; color: var(--text-secondary);">Triggered when a sub-topic is completed. It dynamically formulates multiple-choice or short-answer questions. It validates the user's answer and provides highly specific feedback on exactly why an answer was wrong, rather than just marking it incorrect.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> LearnFlow. All rights reserved.</p>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="features.html">Features</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="about.html">About</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

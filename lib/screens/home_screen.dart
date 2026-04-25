@@ -85,25 +85,25 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   static const List<({String title, String subtitle, double progress, IconData icon})> _focusJeeNeet = [
-    (title: "Today's Focus: Mechanics – Newton's Laws", subtitle: '12 min left', progress: 0.35, icon: Icons.science_rounded),
-    (title: "Today's Focus: Organic Chemistry – Reactions", subtitle: '15 min left', progress: 0.6, icon: Icons.biotech_rounded),
-    (title: "Today's Focus: Electrostatics", subtitle: '8 min left', progress: 0.2, icon: Icons.bolt_rounded),
-    (title: "Today's Focus: Inorganic – Periodic Table", subtitle: '10 min left', progress: 0.5, icon: Icons.table_chart_rounded),
+    (title: "Tutor Suggests: Mechanics – Newton's Laws", subtitle: '12 min left', progress: 0.35, icon: Icons.science_rounded),
+    (title: "Tutor Suggests: Organic Chemistry – Reactions", subtitle: '15 min left', progress: 0.6, icon: Icons.biotech_rounded),
+    (title: "Tutor Suggests: Electrostatics", subtitle: '8 min left', progress: 0.2, icon: Icons.bolt_rounded),
+    (title: "Tutor Suggests: Inorganic – Periodic Table", subtitle: '10 min left', progress: 0.5, icon: Icons.table_chart_rounded),
   ];
   static const List<({String title, String subtitle, double progress, IconData icon})> _focusOlympiads = [
-    (title: "Today's Focus: Problem Solving – Number Theory", subtitle: '20 min', progress: 0.4, icon: Icons.functions_rounded),
-    (title: "Today's Focus: Biology – Genetics", subtitle: '15 min', progress: 0.55, icon: Icons.eco_rounded),
-    (title: "Today's Focus: Logical Reasoning", subtitle: '10 min', progress: 0.3, icon: Icons.psychology_rounded),
+    (title: "Tutor Suggests: Problem Solving – Number Theory", subtitle: '20 min', progress: 0.4, icon: Icons.functions_rounded),
+    (title: "Tutor Suggests: Biology – Genetics", subtitle: '15 min', progress: 0.55, icon: Icons.eco_rounded),
+    (title: "Tutor Suggests: Logical Reasoning", subtitle: '10 min', progress: 0.3, icon: Icons.psychology_rounded),
   ];
   static const List<({String title, String subtitle, double progress, IconData icon})> _focusSchool = [
-    (title: "Today's Focus: Chapter 3 – Photosynthesis", subtitle: '8 min left', progress: 0.4, icon: Icons.eco_rounded),
-    (title: "Today's Focus: Algebra – Linear Equations", subtitle: '12 min left', progress: 0.6, icon: Icons.calculate_rounded),
-    (title: "Today's Focus: Essay Writing", subtitle: '5 min left', progress: 0.75, icon: Icons.edit_note_rounded),
-    (title: "Today's Focus: Indian History – Freedom Struggle", subtitle: '10 min left', progress: 0.25, icon: Icons.menu_book_rounded),
+    (title: "Tutor Suggests: Chapter 3 – Photosynthesis", subtitle: '8 min left', progress: 0.4, icon: Icons.eco_rounded),
+    (title: "Tutor Suggests: Algebra – Linear Equations", subtitle: '12 min left', progress: 0.6, icon: Icons.calculate_rounded),
+    (title: "Tutor Suggests: Essay Writing", subtitle: '5 min left', progress: 0.75, icon: Icons.edit_note_rounded),
+    (title: "Tutor Suggests: Indian History – Freedom Struggle", subtitle: '10 min left', progress: 0.25, icon: Icons.menu_book_rounded),
   ];
   static const List<({String title, String subtitle, double progress, IconData icon})> _focusGeneral = [
-    (title: "Today's Focus: Quick Revision – Mixed Topics", subtitle: '10 min', progress: 0.5, icon: Icons.auto_stories_rounded),
-    (title: "Today's Focus: Daily Quiz", subtitle: '5 questions', progress: 0.0, icon: Icons.quiz_rounded),
+    (title: "Tutor Suggests: Quick Revision – Mixed Topics", subtitle: '10 min', progress: 0.5, icon: Icons.auto_stories_rounded),
+    (title: "Tutor Suggests: Daily AI Quiz", subtitle: '5 questions', progress: 0.0, icon: Icons.quiz_rounded),
   ];
 
   /// Opens ChapterDetailScreen for today's focus (relevant chapter).
@@ -111,7 +111,7 @@ class _HomeScreenState extends State<HomeScreen> {
     BuildContext context,
     ({String title, String subtitle, double progress, IconData icon}) focus,
   ) {
-    final chapterTitle = focus.title.replaceFirst("Today's Focus: ", "").trim();
+    final chapterTitle = focus.title.replaceFirst("Tutor Suggests: ", "").trim();
     final chapterId = 'today_focus_${focus.title.hashCode.abs()}';
     Navigator.push(
       context,
@@ -244,7 +244,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: SizedBox(
                   width: double.infinity,
                   child: PrimaryButton(
-                    text: 'Start Now',
+                    text: 'Start AI Session',
                     onPressed: () => _onTodaysFocusTap(context, focus),
                     size: ButtonSize.small,
                   ),
@@ -263,7 +263,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             Divider(height: r.rSp(32), color: colors.dividerColor, thickness: 1),
             // 3. Continue Learning
-            SectionTitle('Continue Learning'),
+            SectionTitle('AI Learning Path'),
             SizedBox(height: r.rH(12)),
             SizedBox(
               height: r.rH(200),
@@ -297,7 +297,7 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(height: r.rH(24)),
 
             // 4. Weak Areas
-            SectionTitle('Boost Your Weak Topics'),
+            SectionTitle('AI Identified Weak Areas'),
             SizedBox(height: r.rH(12)),
             ..._weakAreasDummy.map(
               (item) {

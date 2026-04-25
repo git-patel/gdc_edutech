@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
 import '../widgets/widgets.dart';
 import 'chapter_detail_screen.dart';
+import 'ai_tutor_screen.dart';
 
 /// Screen showing chapters for a subject (navigated from My Class).
 class SubjectChaptersScreen extends StatelessWidget {
@@ -72,6 +73,22 @@ class SubjectChaptersScreen extends StatelessWidget {
                   );
                 },
               ),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => AITutorScreen(
+                subjectName: subjectName,
+                chapterTitle: 'General Concepts',
+              ),
+            ),
+          );
+        },
+        backgroundColor: colors.primary,
+        icon: Icon(Icons.auto_awesome, color: colors.onPrimary),
+        label: Text('Ask AI Tutor', style: TextStyle(color: colors.onPrimary, fontWeight: FontWeight.bold)),
       ),
     );
   }
