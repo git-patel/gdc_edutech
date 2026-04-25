@@ -3,7 +3,7 @@ import 'onboarding_storage.dart';
 
 class AITutorService {
   // TODO: Replace with actual Gemini API Key from environment or secure storage
-  static const String _apiKey = 'AIzaSyAKgzZbIu-hKZLZHxIvhQgx_r6dsbaYwtc';
+  static const String _apiKey = 'Can not add api key due to privacyissue pleasecheck in application';
   
   late final GenerativeModel _model;
   ChatSession? _chatSession;
